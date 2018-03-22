@@ -32,7 +32,7 @@ if (process.env.JAWSDB_URL){
     host: "localhost",
     user: "root",
     password: "",
-    database: "groupon_db"
+    database: "nw_db"
   });
 }
 
