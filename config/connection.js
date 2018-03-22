@@ -6,7 +6,10 @@ console.log("--------------the environment we are using----------------");
 console.log(app.settings.env);
 console.log("--------------the environment we are using----------------");
 
-if (app.settings.env == "development") {
+if (process.env.JAWSDB_URL) {
+  var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+} else {
   var connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
@@ -14,8 +17,6 @@ if (app.settings.env == "development") {
     password: "",
     database: "nw_db"
   });
-} else {
-  var connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 
 // Make connection.
