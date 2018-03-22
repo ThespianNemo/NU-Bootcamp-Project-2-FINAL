@@ -1,0 +1,98 @@
+<%- include('../partials/header') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('../partials/navbar') -%>
+
+            <div class="container">
+                <!-- form to log in -->
+                <br>
+                <br>
+            <center><h1>Registration</h1></center>
+
+            <form autocomplete="off" role="form" action="" method="">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input autocomplete="nope" placeholder="youremail@something.com" type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password:</label>
+                    <input autocomplete="new-password" type="password" id="password_hash" name="password_hash">
+                </div>
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="campus">Campus:</label>
+                    <input type="text" id="campus" name="campus">
+                </div>
+                <div class="form-group">
+                    <label for="grad_date">Graduation Date:</label>
+                    <input placeholder="YYYY-MM-DD" type="text" id="grad_date" name="grad_date">
+                </div>
+                <div class="form-group">
+                    <label for="link">Personal Portfolio Link:</label>
+                    <input placeholder="Link to Personal Portfolio" type="text" id="link" name="link">
+                </div>
+            
+                <button id="add-btn" type="submit">Sign Up!</button>
+            </form>
+
+            <br>
+            <br>
+
+            </div>
+
+            <!-- Sticky Footer -->
+            <%- include('../partials/footer') -%>
+
+                <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script type="text/javascript">
+    
+        // Question: What does this code do?
+            $("#add-btn").on("click", function (event) {
+                event.preventDefault();
+                var newMember = {
+                    email: $("#email").val(),
+                    password_hash: $("#password_hash").val(),
+                    first_name: $("#first_name").val(),
+                    last_name: $("#last_name").val(),
+                    campus: $("#campus").val(),
+                    grad_date: $("#grad_date").val(),
+                    link: $("#link").val()
+                };
+                console.log(newMember.password)
+                
+                $.post("/create", newMember)
+                    .done(function (data) {
+                        console.log(data);
+                        
+                    });
+            });
+    
+    
+    
+    </script>
+
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

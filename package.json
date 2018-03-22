@@ -1,0 +1,32 @@
+{
+  "name": "northwestern-networkdb",
+  "version": "1.0.0",
+  "description": "Northwestern University Student-Alumni Database (Project Two)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayjaypnil/Northwestern-NetworkDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayjaypnil/Northwestern-NetworkDB/issues"
+  },
+  "homepage": "https://github.com/ayjaypnil/Northwestern-NetworkDB#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}

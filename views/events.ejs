@@ -1,0 +1,47 @@
+<%- include('partials/header.ejs') -%>
+<!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar.ejs') -%>
+
+                <div class="container">
+                
+                    <div class="container">
+                        <h3>Upcoming Events</h3>
+                        <a href="/newevent">
+                            <button>Click here to add an event!</button>
+                        </a>
+        
+                        <% for(var i=0; i < events.length; i++) { %>
+                            <!-- <div class="row"> -->
+                                <div class="col s6 m6">
+                                    <div class="card purple darken-4">
+                                        <div class="card-content white-text">
+                                            <p><%= events[i].date %></p>
+                                            <span class="card-title"><%= events[i].event_name %></span>
+                                            <p><%= events[i].location %></p>
+                                            <p><%= events[i].details %></p>
+                                        </div>
+                                        <div class="card-action white-text grey darken-2">
+                                            <p>For more information, contact: <%= events[i].posted_by %> at <%= events[i].poster_email %></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        <% } %>
+                            <!-- </div> -->
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <br>
+                    <br>
+                </div>
+
+        <!-- Sticky Footer -->
+        <%- include('partials/footer') -%>
+
+    <!-- DO NOT TOUCH!!! -->
+    </body>
+</html>

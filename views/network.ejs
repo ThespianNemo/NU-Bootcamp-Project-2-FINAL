@@ -1,0 +1,45 @@
+<%- include('partials/header') -%>
+<!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar') -%>
+
+            <div class="container">
+                <h3>Your NU Bootcamp Network</h3>
+                <!-- <%- JSON.stringify(users) %> -->
+                
+                <table class="striped bordered">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Campus</th>
+                                <th>Graduation Date</th>
+                                <th>Personal Site Link</th>
+                            </tr>
+                        </thead>
+                    <% for(var i=0; i < users.length; i++) { %>
+                    <tr>
+                        <td><%= users[i].first_name %></td>
+                        <td><%= users[i].last_name %></td>
+                        <td><%= users[i].email %></td>
+                        <td><%= users[i].campus %></td>
+                        <td><%= users[i].grad_date %></td>
+                        <td><%= users[i].site_link %></td>
+                    </tr>
+                    <% } %>
+                </table>
+                
+                
+
+            </div>
+
+        <!-- Sticky Footer -->
+        <%- include('partials/footer') -%>
+     
+    <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script src="/js/app.js"></script>
+</html>

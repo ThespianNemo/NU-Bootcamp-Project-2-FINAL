@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar.ejs') -%>
+
+            <div class="container">
+                <h3>Profile Page</h3>
+
+                <!-- <%- JSON.stringify(data) %> -->
+
+
+
+                <table class="striped bordered">
+                   
+                <% for(var i=0; i < data.length; i++) { %>
+                <tr>
+                    <td><%= data[i].first_name %></td>
+                    <td><%= data[i].last_name %></td>
+                    <td><%= data[i].email %></td>
+                    <td><%= data[i].campus %></td>
+                    <td><%= data[i].grad_date %></td>
+                    <td><%= data[i].site_link %></td>
+                </tr>
+                <% } %>
+            </table>
+
+
+
+            </div>
+
+        <!-- Sticky Footer -->
+        <%- include('partials/footer') -%>
+
+    <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script src="/js/app.js"></script>
+</html>

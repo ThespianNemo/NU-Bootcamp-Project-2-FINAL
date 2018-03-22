@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar.ejs') -%>
+
+            <div class="container">
+                <h3>Career Opportunities</h3>
+                <a href="/newjob">
+                    <button>Click here to add a job posting!</button>
+                </a>
+
+                <% for(var i=0; i < jobs.length; i++) { %>
+                    <!-- <div class="row"> -->
+                        <div class="col s6 m6">
+                            <div class="card purple darken-4">
+                                <div class="card-content white-text">
+                                    <p><%= jobs[i].date_posted %></p>
+                                    <span class="card-title"><%= jobs[i].job_title %></span>
+                                    <p><%= jobs[i].job_description %></p>
+                                </div>
+                                <div class="card-action grey darken-2">
+                                    <a href=<%= jobs[i].link %> target="_blank">Click here for more information!</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                <% } %>
+                    <!-- </div> -->
+            </div>
+
+            <!-- Sticky Footer -->
+            <%- include('partials/footer') -%>
+
+                <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script src="/js/app.js"></script>
+</html>

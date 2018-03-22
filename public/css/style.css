@@ -1,0 +1,27 @@
+h1{
+    color: black;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 65px;
+    max-width: 250px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+ }

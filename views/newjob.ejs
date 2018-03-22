@@ -1,0 +1,81 @@
+<%- include('partials/header.ejs') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar.ejs') -%>
+
+            <div class="container">
+                <!-- form to log in -->
+                <br>
+                <br>
+                <center>
+                    <h3>Create Job Posting</h3>
+                </center>
+
+                <form autocomplete="off" role="form" action="" method="">
+                    <div class="form-group">
+                        <label for="job_title">Job Title:</label>
+                        <input autocomplete="nope" type="text" id="job_title" name="job_title">
+                    </div>
+                    <div class="form-group">
+                        <label for="poster_name">Poster Name:</label>
+                        <input autocomplete="nope" type="text" id="poster_name" name="poster_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="poster_email">Poster Email:</label>
+                        <input type="text" id="poster_email" name="poster_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="job_description">Job Description: (255 characters)</label>
+                        <input type="text" id="job_description" name="job_description">
+                    </div>
+                    <div class="form-group">
+                        <label for="date_posted">Date Posted:</label>
+                        <input  type="text" id="date_posted" name="date_posted">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link To Job:</label>
+                        <input placeholder="Link to job" type="text" id="link" name="link">
+                    </div>
+
+                    <button id="add-job" type="submit">Add New Job!</button>
+                </form>
+
+                <br>
+                <br>
+
+            </div>
+
+            <!-- Sticky Footer -->
+            <%- include('partials/footer') -%>
+
+                <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script type="text/javascript">
+
+        // Question: What does this code do?
+        $("#add-job").on("click", function (event) {
+            event.preventDefault();
+            var newJob = {
+                job_title: $("#job_title").val(),
+                poster_name: $("#poster_name").val(),
+                poster_email: $("#poster_email").val(),
+                job_description: $("#job_description").val(),
+                date_posted: $("#date_posted").val(),
+                link: $("#link").val()
+            };
+            console.log(newJob);
+
+            $.post("/createjob", newJob)
+                .done(function (data) {
+                    console.log(data);
+
+                });
+        });
+
+
+
+    </script>
+
+    </html>

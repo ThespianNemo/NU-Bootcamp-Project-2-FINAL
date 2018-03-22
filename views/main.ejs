@@ -1,0 +1,147 @@
+<%- include('partials/header') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <nav class="purple darken-4" role="navigation">
+            <div class="nav-wrapper container">
+                <div id="logo-container">
+                    <img src="images/nu-boot.png" alt="logo" class="brand-logo" height="100%">
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <br>
+                    <br>
+                    <h1 class="header center white-text text-lighten-2">Northwestern Coding Bootcamp Alumni Network</h1>
+                    <div class="row center">
+                        <h5 class="header col s12 white-text light">A social platform for past and present Northwestern Coding Bootcamp students </h5>
+                    </div>
+                    <div class="row center">
+                        <a id="download-button" href="/signup" class="btn-large waves-effect waves-light purple darken-4 lighten-1">Register</a>
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+            <div class="parallax">
+                <img src="images/background1.jpg" alt="photo">
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="section">
+
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text">
+                                <i class="material-icons">group</i>
+                            </h2>
+                            <h5 class="center">Creating Community</h5>
+
+                            <p class="light">Currently, there is no readily available resource that allows current students and past Northwestern
+                                Coding Bootcamp alumni to get in contact with each other, as well as collaborate and participate
+                                in events tailored to current and past students. We aim to bridge this gap by providing the
+                                platform that will foster a vibrant community centered around keeping the Northwestern Bootcamp
+                                students connected.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text">
+                                <i class="material-icons">event</i>
+                            </h2>
+                            <h5 class="center">Events</h5>
+
+                            <p class="light">Stay in the know! Members have access to upcoming events pertinent to personal and professional
+                                development. See posts regarding, upcoming job fairs, coding club meetings, or just social
+                                gatherings to meet new people or reconnect with old chums!</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text">
+                                <i class="material-icons">school</i>
+                            </h2>
+                            <h5 class="center">Mentorship</h5>
+
+                            <p class="light">Current bootcamp students have the option of obtaining an alumni mentor to help guide them through
+                                their chosen career path. They'll be matched with an alum that most closely matches their
+                                career aspirations. Through this relationship, students will gain valuable insight into what
+                                lies ahead and best practices for obtaining their goals.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <div class="row center">
+                        <h5 class="header col s12 white-text light">We'd love to hear from you!</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax">
+                <img src="images/background1.jpg" alt="NU background img 1">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+
+                <div class="row">
+                    <div class="col s12 center">
+                        <h3>
+                            <i class="mdi-content-send brown-text"></i>
+                        </h3>
+                        <h4>About Us</h4>
+                        <p class="left-align light">
+                            <ul>
+                                <li><strong>Peter Gustafson</strong> - Born and raised in Chicago. Full-stack web developer with a background in Sales, Account Management and Operations at fast-paced, early stage startups. Currently enrolled at Northwestern's Full Stack Web Development bootcamp.</li><br>
+                                <li><strong>AJ Patel</strong> - My name is AJ Patel and I am a unique individual, to say the least. I love sports, investing, epic fiction, meeting new people, and traveling. Currently I am learning web development, and finishing up law school.</li><br>
+                                <li><strong>Preston Cropp</strong> - Originally from St. Louis, educational opportunities led me to Chi-Town. Having a varied background in retail IT systems, educational publishing and development, and diversity training, my skills lend themselves to individuals/companies wanting to create a distinctive web presence.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <%- include('partials/footer') -%>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.parallax').parallax();
+                });
+            </script>
+
+    </body>
+
+    </html>

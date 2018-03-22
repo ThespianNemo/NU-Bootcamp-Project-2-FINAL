@@ -1,0 +1,94 @@
+<%- include('partials/header.ejs') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar.ejs') -%>
+
+            <div class="container">
+                <!-- form to log in -->
+                <br>
+                <br>
+                <center>
+                    <h3>New Event</h3>
+                </center>
+
+                <form autocomplete="off" role="form" action="" method="">
+                    <div class="form-group">
+                        <label for="email">Poster Email:</label>
+                        <input autocomplete="nope" placeholder="youremail@something.com" type="text" id="poster_email" name="poster_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="event_name">Event Name:</label>
+                        <input autocomplete="nope" type="text" id="event_name" name="event_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                    <div class="form-group">
+                        <label for="posted_by">Posted By:</label>
+                        <input type="text" id="posted_by" name="posted_by">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Event Date:</label>
+                        <input placeholder="YYYY-MM-DD" type="text" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Details:</label>
+                        <input placeholder="Event details" type="text" id="details" name="details">
+                    </div>
+
+                    <button id="add-event" type="submit">Add Event!</button>
+                </form>
+
+                <br>
+                <br>
+
+            </div>
+
+            <!-- Sticky Footer -->
+            <%- include('partials/footer') -%>
+
+                <!-- DO NOT TOUCH!!! -->
+    </body>
+    <script type="text/javascript">
+
+        // Question: What does this code do?
+        $("#add-event").on("click", function (event) {
+            event.preventDefault();
+            var newEvent = {
+                poster_email: $("#poster_email").val(),
+                event_name: $("#event_name").val(),
+                location: $("#location").val(),
+                posted_by: $("#posted_by").val(),
+                date: $("#date").val(),
+                details: $("#details").val()
+            };
+            console.log(newEvent)
+
+            $.post("/createevent", newEvent)
+                .done(function (data) {
+                    console.log(data);
+
+                });
+        });
+
+
+
+    </script>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
